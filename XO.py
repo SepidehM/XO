@@ -55,7 +55,8 @@ end_game = False
 while (not end_game) and check_board_free(board, x, y):
     turn +=1
     turn = turn % n
-   
+    draw_board(board, x, y)
+
     valid_input = False
     a = 0
     b = 0
