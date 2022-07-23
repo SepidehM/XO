@@ -56,7 +56,6 @@ while (not end_game) and check_board_free(board, x, y):
     turn +=1
     turn = turn % n
    
-    draw_board(board, x, y)
     valid_input = False
     a = 0
     b = 0
@@ -72,6 +71,7 @@ while (not end_game) and check_board_free(board, x, y):
 
     end_game = check_turn(board, x, y, turn)
 
+draw_board(board, x, y)
 if end_game:
     print("player number"+str(turn)+" is winner!")
 else:
