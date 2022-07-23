@@ -29,7 +29,7 @@ def check_turn(board, x, y, turn):
                 return True
             if i<x-2 and j<y-2 and board[i][j]==str(turn) and board[i+1][j+1]==str(turn) and board[i+2][j+2]==str(turn):
                 return True
-            if i>2 and j>2 and board[i][j]==str(turn) and board[i-1][j-1]==str(turn) and board[i-2][j-2]==str(turn):
+            if i<x-2 and j>=2 and board[i][j]==str(turn) and board[i+1][j-1]==str(turn) and board[i+2][j-2]==str(turn):
                 return True
             
     return False
